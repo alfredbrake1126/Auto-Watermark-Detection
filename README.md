@@ -21,7 +21,7 @@ Although we have a lot of unknown quantities (<a href="https://www.codecogs.com/
 <div align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=\nabla{\hat{W_m}(p)}&space;=&space;median_k(\nabla{J_k(p)})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nabla{\hat{W_m}(p)}&space;=&space;median_k(\nabla{J_k(p)})" title="\nabla{\hat{W_m}(p)} = median_k(\nabla{J_k(p)})" /></a></div>
 
 - Crop `W_m` to remove boundary regions by computing its magnitude and taking the bounding box of the edge map. The initial estimated watermark <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{W}_m&space;\approx&space;W_m" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{W}_m&space;\approx&space;W_m" title="\hat{W}_m \approx W_m" /></a> is estimated using Poisson reconstruction. Here is an estimated watermark using a dataset of 450+ Fotolia images.
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/watermark.png?raw=True" alt="watermark_est"/>
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/watermark.png?raw=True" alt="watermark_est"/>
 
 - Watermark detection: Obtain a verbose edge map (using Canny edge detector) and compute
 its Euclidean distance transform, which is then correlated with <a href="https://www.codecogs.com/eqnedit.php?latex=\nabla{\hat{W_m}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\nabla{\hat{W_m}}" title="\nabla{\hat{W_m}}" /></a>
@@ -41,14 +41,14 @@ Results
 Here are some of the results for watermarked and watermark removed images: 
 
 <div align="center">
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/fotolia_137840668.jpg?raw=True" width="45%">
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/137840668.jpg?raw=True" width="45%"> <br>
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/fotolia_137840668.jpg?raw=True" width="45%">
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/137840668.jpg?raw=True" width="45%"> <br>
 
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/fotolia_168668046.jpg?raw=True" width="45%">
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/168668046.jpg?raw=True" width="45%"> <br>
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/fotolia_168668046.jpg?raw=True" width="45%">
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/168668046.jpg?raw=True" width="45%"> <br>
 
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/fotolia_168668150.jpg?raw=True" width="45%">
-<img src="https://github.com/rohitrango/automatic-watermark-detection/blob/master/final/168668150.jpg?raw=True" width="45%"> <br>
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/fotolia_168668150.jpg?raw=True" width="45%">
+<img src="https://github.com/alfredbrake1126/Auto-Watermark-Detection/blob/master/final/168668150.jpg?raw=True" width="45%"> <br>
 </div>
 
 However, this is a rough implementation and the removal of watermark leaves some "traces" in form of texture distortion or artifacts. I believe this can be corrected by appropriate parameter tuning. 
